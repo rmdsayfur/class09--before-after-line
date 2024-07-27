@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>After-Before and vertical line </title>
+    <style>
+        .after-section{
+            width: 100%;
+            padding: 80px 0px;
+            text-align: center;
+            
+            
+        }
+        .after-section a{
+            padding: 14px 32px;
+            border: 1px solid royalblue;
+            color: gold;
+            background-color:transparent;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.6s linear;
+            border-radius: 30px;
+        }
+
+        .after-section a::after{
+               content: "  ";
+               background: blueviolet;
+               position: absolute;
+               width: 0%;
+               height: 100%;
+               top: 0%;
+               left: 0%;
+               z-index: -1;
+               transition: all 0.6s linear;
+               border-radius: 30px;
+               
+        }
+
+        .after-section a:hover::after{
+            width: 100%;
+
+        }
+        
+        .after-section a:hover{
+            color: gold;
+        }
+
+        /* section2 css */
+
+        .before-section{
+            width: 100%;
+            padding: 80px 0px;
+            text-align: center;
+        }
+        .before-section a{
+            padding: 14px 32px;
+            border: 1px solid black;
+            color:black;
+            background-color:transparent;
+            text-transform: uppercase;
+            text-decoration: none;
+            position: relative;
+            transition: all 0.6s linear;
+            border-radius: 30px;
+            
+        }
+
+        .before-section a::before{
+            content: "";
+            background: deeppink;
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            top: 0%;
+            right: 0%;
+            z-index: -1;
+            transition: all 0.6s linear;
+            border-radius: 30px;
+        }
+        .before-section a:hover::before{
+           width: 100%;
+          
+        }
+        .before-section a:hover{
+           color: black;
+          
+        }
+        /* vertical line css */
+
+        .line-section{
+            width: 100%;
+            padding: 100px 0px;
+
+        }
+
+        .line {
+            background: red;
+            width: 150px;
+            height: 1px;
+            margin: auto;
+            transform: rotate(90deg);
+       }
+
+    </style>
+</head>
+<body>
+
+    <section class="after-section">
+
+        <a href="#"> View More</a>
+        
+    </section>
+
+ <section class="before-section">
+
+    <a href="#"> View More</a>
+
+ </section>
+
+ <section class="line-section">
+    <div class="line"></div>
+ </section>
+    
+</body>
+</html>
